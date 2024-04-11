@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sessions</title>
+</head>
+<body>
+    <h1>Sessions</h1>
+    {% for session in sessions %}
+    <div>
+        <h>--------------------------------------------------------------------------------</h>
+        <p> {{ session['hostname'] }}: {{ session['name'] }} on {{ session['time'] }} </p>
+        <p>raw: {{ session['raw'] }}</p>
+        <p>Input: {{ session['readable'] }}</p>
+    </div>
+    {% endfor %}
+</body>
+</html>
